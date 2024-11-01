@@ -1,0 +1,582 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo */
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: transparent;
+    font-style: normal;
+    font-family: "Sedan SC", serif;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.281);
+    transition: background-color 0.3s;
+}
+
+header a:hover {
+    background-color: #000000;
+    color: rgb(255, 24, 24);
+    border-radius: 20px;
+    font-weight: 900;
+}
+
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Slide */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Imagem do slide */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Legenda centralizada */
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+    background: rgba(92, 53, 53, 0.692);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    line-height: 1.5;
+    font-weight: 300;
+    font-style: normal;
+    font-family: "Sedan SC", serif;
+}
+
+.setas {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.setas .ants, .setas .prox {
+    pointer-events: auto;
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    transition: background-color 0.6s;
+    z-index: 2;
+}
+
+.setas .ants:hover, .setas .prox:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .caption {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .setas .ants, .setas .prox {
+        font-size: 1.5em;
+    }
+}
+
+body {font-family: "Sedan SC", serif;}
+
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
+
+body {
+    font-family: 'Sedan SC', serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Sessão de Comida e Bebida */
+.comida-e-bebida {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.comida-e-bebida .imagem img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.comida-e-bebida .descricao {
+    margin-left: 30px;
+    text-align: left;
+}
+
+.comida-e-bebida h2 {
+    font-size: 2em;
+    color: #a52a2a;
+}
+
+.comida-e-bebida button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #a52a2a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comida-e-bebida button:hover {
+    background-color: #8b0000;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.modal-content h2 {
+    font-size: 1.5em;
+    color: #a52a2a;
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.modal-content p {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+        font-family: "IBM Plex Sans", serif;
+        font-weight: 200;
+        font-style: italic;
+      
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    color: #333;
+    cursor: pointer;
+}
+
+.descricao h2 { font-family: "IBM Plex Sans", serif;
+    font-weight: 200;
+}
+    .descricao button {font-family: "IBM Plex Sans", serif;
+        font-weight: 200;
+        font-style: italic;}
+
+        .caption {font-family: "IBM Plex Sans", serif;
+            font-weight: 300;}
+
+
+
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo */
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Menu Section */
+.menu-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contêiner da imagem */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Empurra a imagem mais para a esquerda */
+    padding-right: 20px;
+}
+
+.image-container img {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    border-radius: 8px;
+}
+
+/* Contêiner do texto */
+.text-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botão para abrir o modal */
+.text-container button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .comida-e-bebida {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imagem {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .imagem img {
+        width: 100%;
+    }
+
+    .descricao {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+
+.comida-e-bebida .descricao {
+    margin-top: 20px; /* Espaço entre o título e o botão */
+    text-align: center; /* Centraliza o texto */
+}
+.texto h2 {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 100px auto 0;
+    color: #333;
+    font-family: "Sedan SC", serif;
+    z-index: 5;
+    margin: 5px auto 0;
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.texto p {
+    text-align: center justify;
+    padding: 50px 50px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    z-index: 5;
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 200;
+    font-style: italic;
+    margin-top: -40px;
+        max-width: 800px; /* Limita a largura da seção */
+        margin: 0 auto; /* Centraliza a seção */
+        padding: 20px; /* Adiciona um pouco de padding para espaçamento interno */
+    
+}
+
+@media (max-width: 768px) {
+    .comida-e-bebida {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza no eixo vertical */
+        justify-content: center; /* Centraliza no eixo horizontal */
+        padding: 0; /* Remove padding extra */
+        margin: 0 auto; /* Centraliza no eixo horizontal */
+        width: 100%;
+    }
+
+    .imagem {
+        padding: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .imagem img {
+        width: 100%;
+    }
+
+    .descricao {
+        text-align: center; /* Centraliza o texto */
+        width: 90%; /* Ajusta a largura para evitar espaçamento extra */
+        max-width: 600px; /* Define um limite de largura */
+        margin: 0 auto; /* Centraliza horizontalmente */
+    }
+}
+
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo */
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: transparent;
+    font-family: "Sedan SC", serif;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.281);
+    transition: background-color 0.3s;
+}
+
+header a:hover {
+    background-color: #000000;
+    color: rgb(255, 24, 24);
+}
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+    background: rgba(92, 53, 53, 0.692);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    line-height: 1.5;
+    font-family: "Sedan SC", serif;
+}
+
+/* Sessão de Comida e Bebida */
+.comida-e-bebida {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.comida-e-bebida .imagem img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.comida-e-bebida .descricao {
+    margin-left: 30px;
+    text-align: left;
+}
+
+.comida-e-bebida h2 {
+    font-size: 2em;
+    color: #a52a2a;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .comida-e-bebida {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .comida-e-bebida .imagem {
+        padding: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .comida-e-bebida .imagem img {
+        width: 100%;
+    }
+
+    .comida-e-bebida .descricao {
+        text-align: center;
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 20px; /* Adiciona um pouco de padding para espaçamento interno */
+    }
+}
+

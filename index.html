@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singles</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Sedan+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="logo">Singles</div>
+        <button class="reserve-button">Reserve um Banco ou Mesa</button>
+    </header>
+
+    <section class="slideshow">
+        <div class="slide active">
+            <img src="./assets/Cigars-and-whisky-is-one-of-the-easiest-pairings-to-do-with-limited-experience.jpg" alt="Foto do ambiente1">
+        </div>
+
+        <div class="slide">
+            <img src="./assets/DALL·E 2024-10-31 13.19.20 - A cozy, stylish bar interior featuring a classic green pool table at the center. The bar has a warm ambiance with soft lighting, exposed brick walls, .webp" alt="Foto do ambiente2">
+             <div class="caption">UM LUGAR PARA CELEBRAR</div>
+        </div>
+
+        <div class="slide">
+            <img src="./assets/martini.jpg" alt="Foto do ambiente2">
+             <div class="caption">DRINKS CLÁSSICOS</div>
+        </div>
+
+        <div class="slide">
+            <img src="./assets/culos-de-whiskey-harmony-e-charuto-com-fundo-de-madeira_1087379-2083.jpg" alt="Foto do ambiente2">
+             <div class="caption">ANTIGO, MAS SEMPRE NA MODA</div>
+        </div>
+
+        <div class="slide">
+            <img src="./assets/amigos-brindando-com-cerveja-e-copos-de-coquetel-em-bar_107420-94815.avif" alt="Foto do ambiente2">
+             <div class="caption">COMPARTILHE MOMENTOS</div>
+        </div>
+
+        <div class="setas">
+            <span class="ants" onclick="prevSlide()">&#10094;</span>
+            <span class="prox" onclick="nextSlide()">&#10095;</span>
+        </div>
+    </section>
+
+    <nav class="menulateral" id="menuLateral">
+        <ul>
+            <li><a href="sobre-o-bar.html">Sobre o Bar</a></li>
+            <li><a href="equipe.html">Equipe</a></li>
+            <li><a href="comida-e-bebida.html">Comida e Bebidas</a></li>
+            <li><a href="eventos-e-festas.html">Eventos e Festas</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="reservas-e-contato.html">Reservas e Contato</a></li>
+            <li><a href="sobre-o-dev.html">Sobre o Desenvolvedor</a></li>
+        </ul>
+    </nav>
+
+    <section class="nova-sessao">
+        <div class="conteudo">
+            <h2>Costa Azul</h2>
+            <p>Escrever um texto sobre o movimento e a beleza 
+                da costa azul e sobre aproveitar a noite no singles 
+            </p>
+        </div>
+
+        <div class="contendo-imagem">
+            <img src="./assets/praia costa.jpg" alt="Praia costa azul">
+        </div>
+    </section>
+
+    <section class="nova-sessao">
+        <div class="conteudo">
+            <h2>Nosso Ambiente</h2>
+            <p>Um texto sobre o Singles ser o único
+                bar da região que toca blues e tem uma noite
+                que toca apenas musicas dos anos 40
+            </p>
+        </div>
+
+        <div class="contendo-imagem">
+            <img src="./assets/vinil.avif" alt="Vinil">
+        </div>
+    </section>
+    
+        
+    <script src="script.js"></script>
+</body>
+</html>

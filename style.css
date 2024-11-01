@@ -1,0 +1,565 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo */
+body {
+    font-family: "Sedan SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    color: rgb(255, 187, 109);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+
+/* Logotipo e botão */
+.logo{
+    font-size: 30px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: block;
+    transition: background-color 0.9s, color 0.9s;
+    border-radius: 7px;
+}
+
+/* Barra de navegação lateral */
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: rgb(255, 24, 24);
+    z-index: 12;
+}
+
+/* Botão de reserva */
+.reserve-button {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: aliceblue;
+    border-radius: 20px;
+    font-family: "Sedan SC", serif;
+    display: block;
+    transition: background-color 0.9s, color 0.9s;
+}
+
+.reserve-button:hover {
+    background-color: #000000;
+    color: rgb(255, 24, 24);
+    border-radius: 20px;
+    font-weight: 900;
+}
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 120px; /* Aumente este valor para adicionar mais espaço acima do slideshow */
+    z-index: 5;
+}
+
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+    z-index: 1;
+    
+}
+
+.slide img {
+    width: 100vw; /* Ajuste para cobrir toda a largura da viewport */
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Legenda */
+.caption {
+    position: absolute;
+    bottom: 30%; /* Aumente este valor para mover a legenda mais para baixo */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+    background: rgba(92, 53, 53, 0.692);
+    padding: 10px 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    line-height: 1.5;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+/* Setas de navegação */
+.setas {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.setas .ants, .setas .prox {
+    pointer-events: auto;
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    transition: background-color 0.6s;
+}
+
+.setas .ants:hover, .setas .prox:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Menu lateral */
+.menulateral {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.568);
+    color: white;
+    transition: left 0.3s;
+    z-index: 11;
+    margin-bottom: 32px;
+    overflow-y: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Sedan SC", serif;
+    
+}
+
+
+
+
+
+
+
+/* Sobre o Bar */
+.sobre-bar {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 100px auto 0;
+    color: #333;
+    font-family: "Sedan SC", serif;
+}
+
+.sobre-bar p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        height: 50px;
+        margin-bottom: 30px;
+        padding: 2px 2px;
+        font-size: 8px;
+        z-index: 6;
+    }
+    
+
+    .caption {
+        font-size: 1.2em;
+        padding: 6px;
+        max-width: 100%;
+        z-index: 12;
+    }
+    
+    .setas .ants, .setas .prox {
+        font-size: 1.5em;
+    }
+
+    .reserve-button {
+        padding: 5px;
+        font-size: 1em;
+    }
+    
+}
+
+.slide.prev, .slide.next {
+    display: block; /* Certifique-se de que os slides adjacentes também sejam exibidos */
+    opacity: 0; /* Começam invisíveis */
+    transition: opacity 1.5s ease; /* Transição suave para a opacidade */
+}
+
+.slide.prev.active, .slide.next.active {
+    opacity: 1; /* Opacidade completa para os slides adjacentes quando ativos */
+}
+
+/* Para que o slide em transição não mostre bordas brancas */
+.slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Cobre toda a área do slide */
+    display: block;
+}
+
+.setas {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* Para evitar interação com o fundo do slideshow */
+}
+
+.setas .ants, .setas .prox {
+    pointer-events: auto; /* Permite interação com as setas */
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.6s;
+}
+
+.setas .ants:hover, .setas .prox:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 100px; /* Aumente para 100px ou mais para criar espaço */
+    z-index: 5;
+}
+
+/* Legenda */
+
+
+/* Estilização da barra de rolagem para Webkit (Chrome, Safari) */
+.menulateral::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+.menulateral::-webkit-scrollbar-track {
+    background: rgba(194, 5, 5, 0.1); /* Cor de fundo da trilha */
+    border-radius: 10px; /* Bordas arredondadas da trilha */
+}
+
+.menulateral::-webkit-scrollbar-thumb {
+    background: rgba(194, 5, 5, 0.1); /* Cor do botão da barra de rolagem */
+    border-radius: 10px; /* Bordas arredondadas do botão */
+}
+
+.menulateral::-webkit-scrollbar-thumb:hover {
+    background: rgba(77, 3, 3, 0.349); /* Cor do botão ao passar o mouse */
+}
+
+/* Para Firefox */
+.menulateral {
+    scrollbar-width: thin; /* Largura da barra de rolagem */
+    scrollbar-color: rgba(77, 3, 3, 0.349) rgba(255, 255, 255, 0.1); /* Cor do botão e da trilha */
+}
+
+.menulateral {
+    position: fixed; /* Para fixar o menu lateral */
+    left: -250px; /* Começa fora da tela */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    transition: left 0.6s ease; /* Animação suave */
+    z-index: 1000;
+    left: -250px;
+    width: 220px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.568);
+    color: white;
+}
+
+.menulateral.active {
+    left: 0; /* Move para a tela */
+}
+
+.menulateral ul {
+    list-style: none; /* Remove estilo da lista */
+    padding: 0;
+    margin: 40px 0 0 0;
+}
+
+.menulateral li {
+    padding: 15px; /* Espaçamento entre os itens */
+}
+
+.menulateral a {
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove underline */
+}
+
+.menulateral a {
+    display: block; /* Faz com que o link ocupe toda a área do li */
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove underline */
+    width: 100%; /* Garante que o link ocupe toda a largura */
+    height: 100%; /* Garante que o link ocupe toda a altura */
+    padding: 15px; /* Mantém o padding dentro do link */
+}
+
+.menulateral li {
+    padding: 15px; /* Espaçamento interno da aba */
+    transition: background-color 0.3s;
+    transition: background-color 0.9s, color 0.9s; /* Animação suave para a mudança de fundo */
+}
+
+.menulateral li:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Cor de fundo ao passar o mouse */
+}
+
+.menulateral a {
+    display: block; /* Faz com que o link ocupe toda a área do li */
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove underline */
+    width: 100%; /* Garante que o link ocupe toda a largura */
+    height: 100%; /* Garante que o link ocupe toda a altura */
+    padding: 15px; /* Mantém o padding dentro do link */
+}
+
+.menulateral ul li a {
+    
+    width: 100%; /* Garante que o link ocupe toda a largura */
+    height: 100%;
+    transition: color 0.9s;
+     /* Garante que o link ocupe toda a altura */
+
+}
+
+.menulateral ul li a:hover {
+ /* Cor de fundo ao passar o mouse */
+    color: rgb(255, 24, 24); /* Cor do texto ao passar o mouse */
+    border-radius: 20px;
+    display: block;
+}
+
+.nova-sessao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.nova-sessao .conteudo {
+    width: 50%;
+    padding-right: 20px; /* Espaço entre o texto e a imagem */
+    color: #6e5835; /* Ajuste de cor */
+    font-family: 'Sedan SC', serif;
+}
+
+.nova-sessao .contendo-imagem {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.nova-sessao .contendo-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Opcional: bordas arredondadas */
+}
+
+@media (max-width: 768px) {
+    .nova-sessao {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nova-sessao .conteudo,
+    .nova-sessao .contendo-imagem {
+        width: 100%;
+        padding: 0;
+    }
+
+    .nova-sessao .contendo-imagem img {
+        margin-top: 20px;
+    }
+}
+
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo */
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    color: rgb(255, 187, 109);
+    background: transparent;
+    font-style: normal;
+    font-family: "Sedan SC", serif;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.281);
+    transition: background-color 0.3s;
+}
+
+header a:hover {
+    background-color: #000000;
+    color: rgb(255, 24, 24);
+    border-radius: 20px;
+    font-weight: 900;
+}
+
+.logo {font-size: 16px;}
+.reserve-button {font-size: 0.7rem;}
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Slide */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+
+/* Imagem do slide */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Legenda centralizada */
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+    background: rgba(92, 53, 53, 0.479);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    line-height: 1.5;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Sedan SC", serif;
+}
+
+/* Setas de navegação */
+.setas {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.setas .ants, .setas .prox {
+    pointer-events: auto;
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    transition: background-color 0.6s;
+    z-index: 2;
+}
+
+.setas .ants:hover, .setas .prox:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+
