@@ -1,0 +1,389 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo */
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: transparent;
+    font-style: normal;
+    font-family: "Sedan SC", serif;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.281);
+    transition: background-color 0.3s;
+}
+
+header a:hover {
+    background-color: #000000;
+    color: rgb(255, 24, 24);
+    border-radius: 20px;
+    font-weight: 900;
+}
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Slide */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Imagem do slide */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Setas de navegação */
+.setas {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.setas .ants, .setas .prox {
+    pointer-events: auto;
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    transition: background-color 0.6s;
+    z-index: 2;
+}
+
+.setas .ants:hover, .setas .prox:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Sessão de comentários com estilo sofisticado */
+.comentarios {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f4f4f8; /* tom suave de cinza */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-family: "Playfair Display", serif;
+    color: #333;
+}
+
+/* Título da seção de comentários */
+.comentarios h2 {
+    text-align: center;
+    font-family: "Sedan SC", serif;
+    color: #2f4f4f; /* tom escuro de verde azulado */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Histórico de comentários */
+.historico-comentarios {
+    margin-bottom: 30px;
+}
+
+/* Estilos individuais dos comentários */
+.comentario {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease;
+}
+
+.comentario:hover {
+    transform: scale(1.02);
+    background-color: #f0f8ff; /* leve destaque ao passar o mouse */
+    border-radius: 8px;
+}
+
+/* Nome do usuário */
+.comentario strong {
+    color: #d4af37; /* tom de dourado */
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+    font-size: 1.1em;
+
+}
+
+/* Estilo do formulário de comentário */
+form {
+    display: flex;
+    flex-direction: column;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+form input, form textarea {
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: border 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border: 1px solid #a3a3a3;
+    outline: none;
+}
+
+/* Botão de enviar */
+form button {
+    padding: 12px;
+    background-color: #d4af37; /* cor dourada */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Sedan SC", serif;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: rgb(255, 24, 24); ; /* tom mais escuro do dourado */
+}
+
+/* Estilo do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-conteudo {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #d4af37; /* borda dourada */
+    width: 70%;
+    max-height: 70%;
+    overflow-y: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão de fechar do modal */
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.fechar:hover, .fechar:focus {
+    color: #333;
+}
+
+
+/* Estilo para o botão "Ver todo o histórico de comentários" */
+#abrir-modal {
+    display: inline-block;
+    background-color: #f4f4f4; /* cor semelhante aos comentários */
+    color: #333; /* cor de fonte consistente */
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+}
+
+#abrir-modal:hover {
+    background-color: rgb(255, 24, 24); ; /* cor mais escura no hover */
+    color: #000;
+}
+
+/* Estilo para o botão "Carregar mais" no modal */
+#carregar-mais {
+    display: inline-block;
+    background-color: #f4f4f4; /* mesma cor de fundo */
+    color: #333; /* mesma cor de fonte */
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 15px;
+}
+
+#carregar-mais:hover {
+    background-color: #e0e0e0; /* cor mais escura no hover */
+    color: #000;
+}
+
+/* Estilo do modal */
+.modal {
+    display: none; /* O modal começa oculto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* fundo semitransparente */
+}
+
+.modal-conteudo {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fechar:hover {
+    color: #000;
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    /* Ajuste da largura e do espaçamento da seção de comentários */
+    .comentarios {
+        padding: 20px;
+        margin: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Tamanho do título */
+    .comentarios h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    /* Layout dos comentários individuais */
+    .comentario {
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 0.9em;
+    }
+
+    /* Formulário de comentário */
+    form input, form textarea {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    /* Botão de enviar */
+    form button {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    /* Ajuste do modal em dispositivos móveis */
+    .modal-conteudo {
+        width: 90%;
+        margin: 20% auto;
+        padding: 20px;
+    }
+
+    /* Botão fechar do modal */
+    .fechar {
+        font-size: 1.2em;
+    }
+}
+
+/* Responsividade para telas muito pequenas (ex: celulares menores) */
+@media (max-width: 480px) {
+    .comentarios {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    /* Título menor */
+    .comentarios h2 {
+        font-size: 1.3em;
+    }
+
+    /* Comentário mais compacto */
+    .comentario {
+        padding: 8px;
+        font-size: 0.85em;
+    }
+
+    /* Formulário de comentário compacto */
+    form input, form textarea {
+        font-size: 0.85em;
+        padding: 8px;
+    }
+
+    /* Botão de enviar menor */
+    form button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    /* Modal compacto */
+    .modal-conteudo {
+        width: 95%;
+        margin: 25% auto;
+        padding: 15px;
+    }
+}
