@@ -1,0 +1,236 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo */
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: transparent;
+    font-style: normal;
+    font-family: "Sedan SC", serif;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.281);
+    transition: background-color 0.3s;
+}
+
+header a:hover {
+    background-color: #000000;
+    color: rgb(255, 24, 24);
+    border-radius: 20px;
+    font-weight: 900;
+}
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Slide */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Imagem do slide */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Legenda centralizada */
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+    background: rgba(92, 53, 53, 0.479);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    line-height: 1.5;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Sedan SC", serif;
+}
+
+/* Setas de navegação */
+.setas {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.setas .ants, .setas .prox {
+    pointer-events: auto;
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    transition: background-color 0.6s;
+    z-index: 2;
+}
+
+.setas .ants:hover, .setas .prox:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Contêiner principal */
+.container-secoes {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: space-between; /* Espaça o texto e a imagem */
+    gap: 40px; /* Espaço entre o texto e a imagem */
+    max-width: 1200px;
+    margin: 50px auto; /* Centraliza a seção na página */
+    padding: 40px;
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    border-radius: 10px; /* Borda arredondada para suavidade */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+/* Estilo para o conteúdo textual */
+.tamanho {
+    flex: 1.2; /* Dá mais espaço para o texto */
+    max-width: 600px;
+}
+
+.eventos-particulares h2 {
+    font-size: 2rem; /* Tamanho grande para o título */
+    color: #333; /* Cor escura para contraste */
+    font-family: "Sedan SC", serif; /* Fonte elegante */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0; /* Linha sutil abaixo do título */
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.eventos-particulares p {
+    font-size: 1.1rem; /* Tamanho maior para legibilidade */
+    line-height: 1.8; /* Espaçamento de linha para melhor leitura */
+    color: #555; /* Cor de texto equilibrada */
+    text-align: justify; /* Texto alinhado para sofisticação */
+    font-family: "IBM Plex Sans", sans-serif; /* Fonte legível e elegante */
+    margin-top: 15px;
+}
+
+/* Estilo para a imagem */
+.sessao-imagem {
+    flex: 1; /* Ajuste de tamanho da imagem */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem no espaço */
+    align-items: center;
+    max-width: 500px;
+}
+
+.contendo-imagem img {
+    width: 100%; /* Ocupa todo o contêiner */
+    height: auto;
+    max-width: 450px; /* Limite de largura da imagem */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    transition: transform 0.3s ease; /* Transição para efeito de hover */
+}
+
+.contendo-imagem img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+    .container-secoes {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .eventos-particulares h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .eventos-particulares p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .sessao-imagem {
+        max-width: 100%;
+    }
+
+    .contendo-imagem img {
+        max-width: 350px;
+    }
+}
+
+/* Responsividade para celulares (largura de tela até 480px) */
+@media (max-width: 480px) {
+    .container-secoes {
+        padding: 15px;
+        margin: 20px auto;
+        gap: 15px;
+    }
+
+    .eventos-particulares h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .eventos-particulares p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: justify; /* Justifica o texto na versão mobile */
+        margin-bottom: 40px; /* Aumenta a distância entre o texto e a imagem */
+        padding-left: 20px; /* Adiciona espaço à esquerda */
+        padding-right: 20px;
+    
+    }
+
+    .contendo-imagem img {
+        max-width: 300px;
+    }
+}
