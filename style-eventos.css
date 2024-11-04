@@ -195,3 +195,95 @@ header a:hover {
 .Festas-semanais p, .Festas-semanais, .eventos-particulares {font-weight: 400;
 font-style: normal;
 font-family: "Sedan SC", serif;}
+
+/* Estilos do calendário */
+/* Estilos do calendário */
+.calendario {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
+
+.calendario-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+/* Estilos para os dias da semana */
+.dias-da-semana {
+    display: contents; /* Para utilizar o grid de forma fluida */
+}
+
+.dias-da-semana div {
+    font-weight: bold;
+    color: #fff; /* Cor do texto */
+    background-color: #007bff; /* Cor de fundo azul */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Sombra para os dias da semana */
+}
+
+/* Estilos para os dias */
+.dia {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+.dia:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05); /* Levemente aumenta o tamanho ao passar o mouse */
+}
+
+.dia.verde {
+    background-color: #28a745; /* Cor verde para os dias destacados */
+    color: white; /* Texto branco */
+}
+
+/* Estilos do modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo preto com transparência */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+    border-radius: 10px; /* Bordas arredondadas para o modal */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra do modal */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

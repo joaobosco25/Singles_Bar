@@ -17,5 +17,3 @@ function prevSlide() {
     slideIndex = (slideIndex - 1 + slides.length) % slides.length;
     showSlide(slideIndex);
 }
-
-setInterval(nextSlide, 5000); // Ajuste o tempo de transição, se necessário
