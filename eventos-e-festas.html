@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos e Festas</title>
+    <link rel="stylesheet" href="style-eventos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="rodape.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
+    <style>
+#calendar {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f4f4f9; 
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+.fc-toolbar-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+
+}
+
+.fc-button {
+    background-color: #006c8c; 
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.fc-button:hover {
+    background-color: #005072;
+}
+
+.fc-daygrid-event {
+    background-color: #00a0d6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.fc-daygrid-event:hover {
+    transform: scale(1.05);
+    background-color: #0078a3;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.fc-daygrid-day-number {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+ .fc-day-tue, .fc-day-mon {
+    background-color: #fac9c965;
+}
+
+
+
+.fc-popover {
+    background-color: #cecbfa;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-to-home">Voltar ao Início</a>
+        <style>.back-to-home {
+           position: absolute;
+           top: 10px;
+           left: 10px;
+           background-color: #333; 
+           color: #fff;
+           padding: 8px 12px;
+           text-decoration: none;
+           border-radius: 5px;
+           font-size: 14px;
+       }
+       
+       .back-to-home:hover {
+           background-color: #555; 
+       }
+       </style>
+   </header>
+
+    <section class="slideshow">
+        <div class="slide active">
+            <img src="./assets/solteiras.jpg" alt="Solteiras">
+            <div class="caption">Conheça a "Noite dos Singles", uma noite especial dedicada aos solteiros,
+                onde a diversão é garantida e as bebidas são mais baratas!
+            </div>
+        </div>
+        <div class="slide">
+            <img src="./assets/festa particu.avif" alt="Festa particular">
+            <div class="caption">Agende o espaço e faça seu evento particular, com 
+                os drinks e a vibe única do Singles Bar</div>
+        </div>
+    </section>
+
+    <section class="eventos-particulares">
+        <h2>Eventos Particulares no Singles</h2>
+        <br>
+        <p>No Singles Bar, cada evento particular se transforma em uma experiência única e específica, imersa em 
+            uma atmosfera nostálgica e vintage. Com sua decoração antiga e aconchegante, o bar é o cenário perfeito 
+            para comemorar momentos especiais, seja um aniversário, uma reunião de amigos ou um encontro romântico. 
+            Os detalhes cuidadosamente preservados, como os móveis de madeira escura e os copos de cristal, 
+            criam um ambiente acolhedor, onde os convidados podem desfrutar de uma seleção de bebidas clássicas e 
+            deliciosas opções de petiscos. Além disso, a equipe dedicada do Singles está pronta para personalizar 
+            cada evento, garantindo que cada celebração seja verdadeiramente especial e inesquecível.</p>
+    </section>
+
+    <section class="Festas-semanais">
+        <h2>Festas da Semana</h2>
+        <br>
+        <p>O Singles Bar é o lugar ideal para se reunir com amigos e desfrutar de uma atmosfera vibrante, abrindo suas
+            portas de terça a domingo! Não perca as “Sextas dos Solteiros”, uma noite especial dedicada aos solteiros,
+            onde a diversão é garantida e as bebidas são mais baratas! É a oportunidade perfeita para socializar, 
+            conhecer novas pessoas e celebrar a liberdade em um ambiente nostálgico e acolhedor. Venha curtir noites
+            recheadas de boa música, drinks refrescantes e um clima descontraído que só o Singles pode oferecer.
+            Traga seus amigos e faça parte dessa festa imperdível!</p>
+    </section>
+
+    <div class="setas">
+        <span class="ants" onclick="prevSlide()">&#10094;</span>
+        <span class="prox" onclick="nextSlide()">&#10095;</span>
+    </div>
+
+    <section class="calendario">
+        <h2>Calendário de Eventos</h2>
+        <div id="calendar"></div>
+    </section>
+
+    <div class="footer-bottom">
+        <p><a href="#termos">Termos de Uso</a> | <a href="#privacidade">Política de Privacidade</a></p>
+        <p>&copy; 2024 Empresa. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+    <script src="eventos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales/pt-br.js"></script>
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'pt-br',
+        events: [
+        {
+                        title: 'Quarta de Jazz',
+                        start: '2024-11-06',
+                        description: 'A noite de Jazz que fará a noite tremer.'
+                    },
+
+                    {
+                        title: 'Quarta de Jazz',
+                        start: '2024-11-13',
+                        description: 'A noite de Jazz que fará a noite tremer.'
+                    },
+
+                    {
+                        title: 'Quarta de Jazz',
+                        start: '2024-11-20',
+                        description: 'A noite de Jazz que fará a noite tremer.'
+                    },
+
+                    {
+                        title: 'Quarta de Jazz',
+                        start: '2024-11-27',
+                        description: 'A noite de Jazz que fará a noite tremer.'
+                    },
+
+                    {
+                        title: 'Sábado dos Singles!',
+                        start: '2024-11-08',
+                        description: 'A noite dedicada aos solteiros, venham curtir e quem sabe, achem o amor!'
+                    },
+
+                    {
+                        title: 'Sábado dos Singles!',
+                        start: '2024-11-15',
+                        description: 'A noite dedicada aos solteiros, venham curtir e quem sabe, achem o amor!'
+                    },
+        ],
+        eventClick: function(info) {
+            
+            const modalContent = `
+                <div class="event-modal">
+                    <h3>${info.event.title}</h3>
+                    <p>Data: ${info.event.start.toISOString().slice(0, 10)}</p>
+                    <p>${info.event.extendedProps.description}</p>
+                    <button onclick="fecharModal()">Fechar</button>
+                </div>`;
+            document.body.insertAdjacentHTML('beforeend', modalContent);
+        }
+    });
+    calendar.render();
+});
+
+function fecharModal() {
+    document.querySelector('.event-modal').remove();
+}
+    </script>
+</body>
+</html>

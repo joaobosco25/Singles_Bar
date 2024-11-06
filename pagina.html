@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+rel="stylesheet"/>  
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto da Página</title>
+    <link rel="stylesheet" href="stylepagina.css" />
+  </head>
+  <body>
+    <div id="container">
+        <div id="profile"> 
+            <img src="./midiapagina/Capturar.png" 
+            alt="Foto de avatar João Bosco"
+        />
+    <p>JOÃO BOSCO</p>
+</div>
+<div id="container2">
+    <ul>
+        <li><a href="#" class="open-modal" data-modal="modal-portfolio">Baixar meus portfólios acadêmicos</a></li>
+        <li><a href="#" class="open-modal" data-modal="modal-sonhos">Sonhos Profissionais e Metas</a></li>
+        <li><a href="#" class="open-modal" data-modal="modal-pontos-fortes">Pontos Fortes</a></li>
+    </ul>
+</div>
+
+<!-- Modal para Baixar Portfólios -->
+<div class="modal" id="modal-portfolio">
+    <div class="content">
+        <span class="close" data-modal="modal-portfolio">&times;</span>
+        <h1 class="title">Baixar meus Portfólios e Certificados</h1>
+        <p class="text">Aqui você pode baixar meus portfólios acadêmicos e alguns certificados.</p>
+        <a href="./assets/Portfolio de Projeto de Software Completo.pdf" download class ="download-link"><br> Portifólio "Projetos de Software"!</a>
+        <a href="./assets/Portfolio Sistemas Operacionais Completo Ubuntu.pdf" download class ="download-link"><br> Portifólio "Sistemas Operacionais"!</a>
+        <a href="/assets/TESE COMPLETA dESENVOLVIMENTO E GERENCIAMENTO DE BANCO DE DADOS.pdf" download class ="download-link"><br> Portifólio "Desenvolvimento e Gerenciamento de Banco de Dados"!</a>
+        <a href="./assets/certificado (2).pdf" download class ="download-link"><br> Certificado "Estrutura de Dados em Python"!</a>
+        <a href="./assets/certificado (3).pdf" download class ="download-link"><br> Certificado "Introdução à Análise de Dados em Python"!</a>
+        <a href="./assets/certificado (4).pdf" download class ="download-link"><br> Certificado "Introdução à Linguagem Python"!</a>
+        <button onclick="closeModal('modal-portfolio')">Fechar</button>
+    </div>
+</div>
+
+<!-- Modal para Sonhos Profissionais -->
+<div class="modal" id="modal-sonhos">
+    <div class="content">
+        <span class="close" data-modal="modal-sonhos">&times;</span>
+        <h1 class="title">Sonhos Profissionais e Metas Pessoais</h1>
+        <p class="text">Meu sonho profissional é fazer parte de uma boa empresa na área de T.I e fazer 
+            a transição de carreira para Developer, começando como Estágio, Trainee, Junior e 
+            continuar evoluindo, sempre buscando mais conhecimento e estudando.
+            <br>
+            <br> A longo prazo, ser uma referência e ajudar quem está começando. Além disso, dentro
+            de alguns anos, pretendo fazer cursos práticos de Inteligência Artifical.
+            <br> Busco crescer na empresa, entrando num cargo baixo, aprendendo e chegar em um cargo alto e ensinar 
+            aos que estarão começando.</p>
+        <button onclick="closeModal('modal-sonhos')">Fechar</button>
+    </div>
+</div>
+
+<!-- Modal para Pontos Fortes -->
+<div class="modal" id="modal-pontos-fortes">
+    <div class="content">
+        <span class="close" data-modal="modal-pontos-fortes">&times;</span>
+        <h1 class="title">Pontos Fortes</h1>
+        <p class="text">Sou um profissional extremamente dedicado e pontual. Sigo um método que
+            li, de tirar duas horas do dia, todos os dias da semana, para aprender coisas novas
+            e tiro uma semana para aprender e outra para aperfeiçoar o máximo possível.
+            Em resumo, procuro sempre me manter informado sobre curiosidades e profissional. 
+            Sou pontual e a empresa que me der a oportunidade, como primeira empresa, poderá me moldar 
+            como profissional, garantindo meu carinho e fidelidade. 
+            Por isso, pretendo começar como estagiário ou auxiliar e ir crescendo.
+        </p>
+        <button onclick="closeModal('modal-pontos-fortes')">Fechar</button>
+    </div>
+</div>
+
+
+<div id="social-links">
+    <a href="https://wa.me/+5532984560451" target="_blank">
+    <ion-icon name="logo-whatsapp"></ion-icon></a>
+    <a href="https://www.linkedin.com/in/jo%C3%A3o-bosco-ferreira-2a6b46225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    target="_blank"><ion-icon name="logo-linkedin"></ion-icon>
+    </a>
+    <a href="https://github.com/joaobosco25" target="_blank">
+    <ion-icon name="logo-github"></ion-icon></a>
+         </div>
+   
+
+    <script src="index.js"></script>
+    <script src="modal.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      </body>
+</html>

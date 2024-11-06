@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe</title>
+    <link rel="stylesheet" href="equipe.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rodape.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-to-home">Voltar ao Início</a>
+        <style>.back-to-home {
+           position: absolute;
+           top: 10px;
+           left: 10px;
+           background-color: #333; 
+           color: #fff;
+           padding: 8px 12px;
+           text-decoration: none;
+           border-radius: 5px;
+           font-size: 14px;
+       }
+       
+       .back-to-home:hover {
+           background-color: #555; 
+       }
+       </style>
+   </header>
+
+    <section class="slideshow">
+        <div class="slide active">
+            <img src="./assets/equipe 1.jpg" alt="Equipe">
+            <div class="caption">Cuidado excepcional ao manusear seu pedido
+            </div>
+        </div>
+        <div class="slide">
+            <img src="./assets/equipe 2.jpg" alt="taberneiro">
+            <div class="caption">Taberneiros experiêntes que pararam no tempo</div>
+        </div>
+        <div class="slide">
+            <img src="./assets/equipe 3.jpg" alt="taberna">
+            <div class="caption">Marcas selecionadas impecavelmente</div>
+        </div>
+    </section>
+
+    
+       <div class="container-secoes">
+        <div class="tamanho">
+         <section class="eventos-particulares">
+            <h2>Nossa Equipe</h2>
+            <br>
+            <p>No Singles Bar, nossos taberneiros e garçons são mais que apenas funcionários, são o coração pulsante da experiência. Com um atendimento caloroso e personalizado, eles conhecem cada detalhe do nosso cardápio e estão sempre prontos para sugerir o drink perfeito ou aquele petisco irresistível. Atenciosos e carismáticos, nossos profissionais criam uma atmosfera acolhedora, tornando cada visita única. Seja no balcão ou nas mesas, eles garantem que você se sinta em casa e faça parte da energia vibrar</p>
+         </section>
+        </div>
+
+        
+            
+
+
+         <section class="sessao-imagem">
+            <div class="contendo-imagem">
+                <img src="./assets/bartender.webp" alt="Bartender">
+            </div>
+         </section>
+        </div>
+
+        <div class="setas">
+            <span class="ants" onclick="prevSlide()">&#10094;</span>
+            <span class="prox" onclick="nextSlide()">&#10095;</span>
+        </div>
+        
+
+        <div class="footer-bottom">
+            <p><a href="#termos">Termos de Uso</a> | <a href="#privacidade">Política de Privacidade</a></p>
+            <p>&copy; 2024 Empresa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="eventos.js"></script>
+</body>
+</html>
