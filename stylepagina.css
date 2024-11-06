@@ -61,7 +61,7 @@
         
     }
   
-    .content > * { /*Somente para o modal ficar mais visivel*/
+    .content > * { 
         color: white
     }
     ul {
