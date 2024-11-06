@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+<<<<<<< HEAD
 <link rel="stylesheet" href="rodape.css">
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
     <style>
@@ -80,10 +81,56 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+=======
+
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
+    <style>
+        /* Estilo para o calendário */
+        #calendar {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .fc-daygrid-event {
+            background-color: #007bff; /* Cor de fundo dos eventos */
+            color: white; /* Cor do texto dos eventos */
+            border: none; /* Remover borda */
+            border-radius: 5px; /* Bordas arredondadas */
+            padding: 5px; /* Espaçamento interno */
+            cursor: pointer; /* Mãozinha ao passar o mouse */
+        }
+
+        .fc-daygrid-event:hover {
+            background-color: #0056b3; /* Cor ao passar o mouse */
+        }
+
+        .fc-toolbar-title {
+            font-weight: 700; /* Título em negrito */
+            font-size: 1.5rem; /* Aumentar o tamanho do título */
+        }
+
+        .fc-button {
+            background-color: #007bff; /* Cor dos botões */
+            color: white; /* Cor do texto dos botões */
+            border: none; /* Remover borda */
+            padding: 10px 20px; /* Espaçamento interno */
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+
+        .fc-button:hover {
+            background-color: #0056b3; /* Cor ao passar o mouse */
+        }
+>>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     </style>
 </head>
 <body>
     <header>
+<<<<<<< HEAD
         <a href="index.html" class="back-to-home">Voltar ao Início</a>
         <style>.back-to-home {
            position: absolute;
@@ -102,6 +149,10 @@
        }
        </style>
    </header>
+=======
+        <a href="index.html">Home</a>
+    </header>
+>>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 
     <section class="slideshow">
         <div class="slide active">
@@ -145,11 +196,16 @@
         <span class="prox" onclick="nextSlide()">&#10095;</span>
     </div>
 
+<<<<<<< HEAD
+=======
+    <!-- Calendário Dinâmico -->
+>>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     <section class="calendario">
         <h2>Calendário de Eventos</h2>
         <div id="calendar"></div>
     </section>
 
+<<<<<<< HEAD
     <div class="footer-bottom">
         <p><a href="#termos">Termos de Uso</a> | <a href="#privacidade">Política de Privacidade</a></p>
         <p>&copy; 2024 Empresa. Todos os direitos reservados.</p>
@@ -221,6 +277,83 @@ document.addEventListener('DOMContentLoaded', function() {
 function fecharModal() {
     document.querySelector('.event-modal').remove();
 }
+=======
+    <script src="eventos.js"></script>
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales/pt-br.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                locale: 'pt-br', // Define o idioma como português do Brasil
+                events: [
+                    
+                    {
+                        title: 'Quartas de Jazz',
+                        start: '2024-11-07',
+                        description: 'A noite de Jazz que fará a noite tremer.'
+                    },
+                    {
+                        title: 'Noite dos Singles',
+                        start: '2024-11-01',
+                        description: 'A noite dos Solteiros! Só solteiros!.'
+                    },
+                    {
+                        title: 'Noite dos Singles',
+                        start: '2024-11-01',
+                        description: 'A noite dos Solteiros! Só solteiros!.'
+                    },
+                    {
+                        title: 'Noite dos Singles',
+                        start: '2024-11-08',
+                        description: 'A noite dos Solteiros! Só solteiros!.'
+                    },
+                    {
+                        title: 'Noite dos Singles',
+                        start: '2024-11-15',
+                        description: 'A noite dos Solteiros! Só solteiros!.'
+                    },
+                    {
+                        title: 'Noite dos Singles',
+                        start: '2024-11-22',
+                        description: 'A noite dos Solteiros! Só solteiros!.'
+                    },
+
+                    {
+                        title: 'Quartas de Jazz',
+                        start: '2024-11-14',
+                        description: 'A noite de Jazz que fará a noite tremer.'
+                    },
+
+                    {
+                        title: 'Quartas de Jazz',
+                        start: '2024-11-21',
+                        description: 'A noite de Jazz que fará a noite tremer.'
+                    },
+
+                    {
+                        title: 'Quartas de Jazz',
+                        start: '2024-11-28',
+                        description: 'A noite de Jazz que fará a noite tremer.'
+                    },
+
+                    
+                    {
+                        title: 'Festa Particular',
+                        start: '2024-11-15',
+                        end: '2024-11-16',
+                        description: 'Reserve o espaço para seu evento.'
+                    },
+                ],
+                eventClick: function(info) {
+                    alert(info.event.title + "\n" + info.event.start.toISOString().slice(0, 10));
+                }
+            });
+            calendar.render();
+        });
+>>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     </script>
 </body>
 </html>
