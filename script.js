@@ -1,8 +1,10 @@
+// Função para alternar o menu lateral
 function toggleMenu() {
     const menu = document.getElementById('menuLateral'); 
     menu.classList.toggle('active'); 
 }
 
+// Fecha o menu se clicar fora dele
 document.addEventListener('click', function(event) {
     const menu = document.getElementById('menuLateral'); 
     const menuIcon = document.querySelector('.menu-icon'); 
@@ -12,10 +14,12 @@ document.addEventListener('click', function(event) {
     }
 });
 
+// Controle do slideshow
 let slideIndex = 0;
 const slides = document.querySelectorAll('.slide');
 showSlide(slideIndex);
 
+// Mostra o slide atual
 function showSlide(index) {
     slides.forEach((slide, i) => {
         slide.classList.remove('active', 'prev', 'next'); 
@@ -29,24 +33,20 @@ function showSlide(index) {
     });
 }
 
+// Avança para o próximo slide
+function nextSlide() {
     slideIndex = (slideIndex + 1) % slides.length;
     showSlide(slideIndex);
 }
 
+// Volta para o slide anterior
 function prevSlide() {
     slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-}
-}
-
-window.onclick = function(event) {
-    if (event.target === modal) {
-        modal.style.display = "none"; 
-    }
+    showSlide(slideIndex);
 }
 
-=======
 // Inicia o slideshow automático
-setInterval(nextSlide, 8000); // Muda a cada 5 segundos
+setInterval(nextSlide, 8000); // Muda a cada 8 segundos
 
 // Código para o modal
 const modal = document.getElementById("modal");
@@ -65,5 +65,4 @@ window.onclick = function(event) {
 }
 
 // Certifique-se de que o modal esteja inicialmente escondido
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
-modal.style.display = "none"; 
+modal.style.display = "none";
