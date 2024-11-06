@@ -1,26 +1,14 @@
-<<<<<<< HEAD
-=======
-/* Reset de estilo */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-=======
-/* Estilos do corpo */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 body {
     font-family: "IBM Plex Sans", sans-serif;
     overflow-x: hidden;
 }
 
-<<<<<<< HEAD
-=======
-/* Cabeçalho */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 header {
     display: flex;
     justify-content: center;
@@ -53,10 +41,6 @@ header a:hover {
     font-weight: 900;
 }
 
-<<<<<<< HEAD
-=======
-/* Slideshow */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 .slideshow {
     position: relative;
     width: 100%;
@@ -64,10 +48,6 @@ header a:hover {
     overflow: hidden;
 }
 
-<<<<<<< HEAD
-=======
-/* Slide */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 .slide {
     position: absolute;
     width: 100%;
@@ -81,20 +61,12 @@ header a:hover {
     z-index: 1;
 }
 
-<<<<<<< HEAD
-=======
-/* Imagem do slide */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-<<<<<<< HEAD
-=======
-/* Setas de navegação */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 .setas {
     position: absolute;
     top: 50%;
@@ -120,53 +92,29 @@ header a:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-<<<<<<< HEAD
-=======
-/* Sessão de comentários com estilo sofisticado */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 .comentarios {
     max-width: 800px;
     margin: 40px auto;
     padding: 30px;
-<<<<<<< HEAD
     background-color: #f4f4f8; 
-=======
-    background-color: #f4f4f8; /* tom suave de cinza */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     font-family: "Playfair Display", serif;
     color: #333;
 }
 
-<<<<<<< HEAD
 .comentarios h2 {
     text-align: center;
     font-family: "Sedan SC", serif;
     color: #2f4f4f; 
-=======
-/* Título da seção de comentários */
-.comentarios h2 {
-    text-align: center;
-    font-family: "Sedan SC", serif;
-    color: #2f4f4f; /* tom escuro de verde azulado */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
-=======
-/* Histórico de comentários */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 .historico-comentarios {
     margin-bottom: 30px;
 }
 
-<<<<<<< HEAD
-=======
-/* Estilos individuais dos comentários */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 .comentario {
     padding: 15px;
     border-bottom: 1px solid #e0e0e0;
@@ -176,7 +124,6 @@ header a:hover {
 
 .comentario:hover {
     transform: scale(1.02);
-<<<<<<< HEAD
     background-color: #f0f8ff; 
     border-radius: 8px;
 }
@@ -190,22 +137,6 @@ header a:hover {
 }
 
 
-=======
-    background-color: #f0f8ff; /* leve destaque ao passar o mouse */
-    border-radius: 8px;
-}
-
-/* Nome do usuário */
-.comentario strong {
-    color: #d4af37; /* tom de dourado */
-    font-weight: bold;
-    font-family: "Playfair Display", serif;
-    font-size: 1.1em;
-
-}
-
-/* Estilo do formulário de comentário */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 form {
     display: flex;
     flex-direction: column;
@@ -226,16 +157,9 @@ form input:focus, form textarea:focus {
     outline: none;
 }
 
-<<<<<<< HEAD
 form button {
     padding: 12px;
     background-color: #d4af37; 
-=======
-/* Botão de enviar */
-form button {
-    padding: 12px;
-    background-color: #d4af37; /* cor dourada */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -249,10 +173,6 @@ form button:hover {
     background-color: rgb(255, 24, 24); ; /* tom mais escuro do dourado */
 }
 
-<<<<<<< HEAD
-=======
-/* Estilo do modal */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 .modal {
     display: none;
     position: fixed;
@@ -269,11 +189,7 @@ form button:hover {
     background-color: #fefefe;
     margin: 10% auto;
     padding: 30px;
-<<<<<<< HEAD
     border: 1px solid #d4af37; 
-=======
-    border: 1px solid #d4af37; /* borda dourada */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     width: 70%;
     max-height: 70%;
     overflow-y: auto;
@@ -281,10 +197,6 @@ form button:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-<<<<<<< HEAD
-=======
-/* Botão de fechar do modal */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 .fechar {
     color: #aaa;
     float: right;
@@ -298,19 +210,11 @@ form button:hover {
 }
 
 
-<<<<<<< HEAD
 
 #abrir-modal {
     display: inline-block;
     background-color: #f4f4f4; 
     color: #333; 
-=======
-/* Estilo para o botão "Ver todo o histórico de comentários" */
-#abrir-modal {
-    display: inline-block;
-    background-color: #f4f4f4; /* cor semelhante aos comentários */
-    color: #333; /* cor de fonte consistente */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     padding: 12px 24px;
     font-size: 16px;
     font-weight: bold;
@@ -323,7 +227,6 @@ form button:hover {
 }
 
 #abrir-modal:hover {
-<<<<<<< HEAD
     background-color: rgb(255, 24, 24); ; 
     color: #000;
 }
@@ -333,17 +236,6 @@ form button:hover {
     display: inline-block;
     background-color: #f4f4f4; 
     color: #333; 
-=======
-    background-color: rgb(255, 24, 24); ; /* cor mais escura no hover */
-    color: #000;
-}
-
-/* Estilo para o botão "Carregar mais" no modal */
-#carregar-mais {
-    display: inline-block;
-    background-color: #f4f4f4; /* mesma cor de fundo */
-    color: #333; /* mesma cor de fonte */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     padding: 10px 20px;
     font-size: 15px;
     font-weight: bold;
@@ -356,7 +248,6 @@ form button:hover {
 }
 
 #carregar-mais:hover {
-<<<<<<< HEAD
     background-color: #e0e0e0; 
     color: #000;
 }
@@ -364,15 +255,6 @@ form button:hover {
 
 .modal {
     display: none; 
-=======
-    background-color: #e0e0e0; /* cor mais escura no hover */
-    color: #000;
-}
-
-/* Estilo do modal */
-.modal {
-    display: none; /* O modal começa oculto */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -380,11 +262,7 @@ form button:hover {
     width: 100%;
     height: 100%;
     overflow: auto;
-<<<<<<< HEAD
     background-color: rgba(0, 0, 0, 0.5); 
-=======
-    background-color: rgba(0, 0, 0, 0.5); /* fundo semitransparente */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
 }
 
 .modal-conteudo {
@@ -410,60 +288,34 @@ form button:hover {
 }
 
 
-<<<<<<< HEAD
 @media (max-width: 768px) {
-=======
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    /* Ajuste da largura e do espaçamento da seção de comentários */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     .comentarios {
         padding: 20px;
         margin: 15px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
-<<<<<<< HEAD
-=======
-    /* Tamanho do título */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     .comentarios h2 {
         font-size: 1.5em;
         margin-bottom: 15px;
     }
 
-<<<<<<< HEAD
-=======
-    /* Layout dos comentários individuais */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     .comentario {
         padding: 10px;
         margin-bottom: 10px;
         font-size: 0.9em;
     }
 
-<<<<<<< HEAD
-=======
-    /* Formulário de comentário */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     form input, form textarea {
         font-size: 0.9em;
         padding: 10px;
     }
 
-<<<<<<< HEAD
-=======
-    /* Botão de enviar */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     form button {
         font-size: 1em;
         padding: 10px;
     }
 
-<<<<<<< HEAD
-=======
-    /* Ajuste do modal em dispositivos móveis */
->>>>>>> 861facf40c2b0650ec0eee72a9c7eab2754d5ff9
     .modal-conteudo {
         width: 90%;
         margin: 20% auto;
