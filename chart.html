@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Linguagens</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Distribuição das Linguagens Utilizadas no Projeto</h2>
+    <div style="width: 60%; max-width: 500px; margin: 0 auto;">
+        <canvas id="languageChart"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('languageChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['HTML', 'CSS', 'JavaScript'], 
+                datasets: [{
+                    data: [42, 50, 8], // Dados em porcentagem
+                    backgroundColor: [
+                        'rgba(600, 0, 0, 20)',
+                        'rgba(54, 100, 235, 9.5)',
+                        'rgba(255, 206, 86, 11)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: { display: true, position: 'top' }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
